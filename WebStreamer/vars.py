@@ -8,13 +8,13 @@ load_dotenv()
 
 class Var(object):
     MULTI_CLIENT = False
-    API_ID = int(environ.get("API_ID", "16612056"))
-    API_HASH = str(environ.get("API_HASH", "ae32caf162207865ff93b9b931b2ba54"))
-    BOT_TOKEN = str(environ.get("BOT_TOKEN", "5320935817:AAHkeIjGH5acii7lbUGe4MtM0Wu_UEF_EWU"))
+    API_ID = int(environ.get("API_ID"))
+    API_HASH = str(environ.get("API_HASH"))
+    BOT_TOKEN = str(environ.get("BOT_TOKEN"))
     SLEEP_THRESHOLD = int(environ.get("SLEEP_THRESHOLD", "60"))  # 1 minte
     WORKERS = int(environ.get("WORKERS", "12"))  # 6 workers = 6 commands at once
     BIN_CHANNEL = int(
-        environ.get("BIN_CHANNEL", "-1001776002963")
+        environ.get("BIN_CHANNEL")
     )  # you NEED to use a CHANNEL when you're using MULTI_CLIENT
     PORT = int(environ.get("PORT", "1234"))
     BIND_ADDRESS = str(environ.get("WEB_SERVER_BIND_ADDRESS", "0.0.0.0"))
@@ -40,7 +40,7 @@ class Var(object):
             "s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT)
         )
 
-    UPDATES_CHANNEL = str(environ.get('UPDATES_CHANNEL', "yop18741564"))
+    UPDATES_CHANNEL = str(environ.get('UPDATES_CHANNEL'))
     OWNER_ID = int(environ.get('OWNER_ID', '864476272'))
 
     BANNED_CHANNELS = list(set(int(x) for x in str(environ.get("BANNED_CHANNELS", "-1001296894100")).split()))
