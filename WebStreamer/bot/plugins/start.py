@@ -53,4 +53,3 @@ async def download(event):
                 await event.reply(f"⛔️امکان ارسال همزمان چند فایل وجود ندارد⛔️")
                 return
         w[event.sender_id] = time.time()
-        )
