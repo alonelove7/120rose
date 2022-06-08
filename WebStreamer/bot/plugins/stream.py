@@ -11,6 +11,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.enums.parse_mode import ParseMode
 from urllib.parse import quote_plus
+from telethon.sync import TelegramClient
 import requests
 import re
 import time
@@ -107,4 +108,3 @@ async def download(event):
                 await event.reply(f"⛔️امکان ارسال همزمان چند فایل وجود ندارد⛔️")
                 return
         w[event.sender_id] = time.time()
-        )
