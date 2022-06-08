@@ -8,3 +8,5 @@ requests
 pyromod
 apscheduler
 psutil
+Telethon
+cryptg
