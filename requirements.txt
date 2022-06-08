@@ -1,0 +1,10 @@
+aiohttp
+pyrogram>=2.0.17
+python-dotenv
+tgcrypto
+motor
+aiofiles
+requests
+pyromod
+apscheduler
+psutil
